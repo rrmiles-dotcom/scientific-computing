@@ -13,7 +13,7 @@ def solve_normal_equations(
     if matrix.ndim != 2:
         raise ValueError("matrix must be two-dimensional")
 
-    if matrix.ndim != 1:
+    if rhs.ndim != 1:
         raise ValueError("rhs must be one-dimensional")
 
     rows, cols = matrix.shape
@@ -66,7 +66,7 @@ def qr_decomposition(
 
         for j in range(i + 1, cols):
             r[i, j] = np.dot(
-                q[i:, i],
+                q[:, i],
                 vectors[:, j],
             )
 
