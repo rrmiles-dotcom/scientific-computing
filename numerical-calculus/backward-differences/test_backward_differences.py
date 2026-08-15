@@ -184,4 +184,4 @@ def test_array_rejects_zero_step():
         backward_difference_array(
             values,
             step = 0.0,
-        )
+        )    
